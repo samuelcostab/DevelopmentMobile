@@ -1,33 +1,31 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, ImageBackground, TouchableOpacity, Button } from 'react-native';
 import MenuDay from './src/components/MenuDay';
-import HomeScreen from './HomeScreen';
-import SettingsScreen from './SettingsScreen';
 
 const menuDays = [
   {
     id: "01",
-    day: "Segunda-Feira",
+    day: "Segunda-feira",
     description: "Arroz com Frango e Bacon",
   },
   {
     id: "02",
-    day: "Terça-Feira",
+    day: "Terça-feira",
     description: "Feijoada com Arroz Tropeiro",
   },
   {
     id: "03",
-    day: "Quarta-Feira",
+    day: "Quarta-feira",
     description: "Figada com Cuscuz",
   },
   {
     id: "04",
-    day: "Quinta-Feira",
+    day: "Quinta-feira",
     description: "Bife Acebolado com Baião",
   },
   {
     id: "05",
-    day: "Sexta-Feira",
+    day: "Sexta-feira",
     description: "Maminha assada com Arroz e Marcarrão",
   }
 ];
@@ -44,15 +42,13 @@ const menuDays = [
 
 export default class App extends Component {
   state = {
-    indexMenuDays: 1,
+    indexMenuDays: 0,
   }
 
   render() {
     return (
       <View style={styles.container}>
-
         <View style={styles.boxTitle}>
-
           <ImageBackground style={styles.imgBackground}
             resizeMode='cover'
             source={require('./src/img/imgPlace.jpg')}>
@@ -61,6 +57,8 @@ export default class App extends Component {
           </ImageBackground>
         </View>
 
+        <ImageBackground style={styles.imgBackgroundTwo} resizeMode ='cover'
+          source={require('./src/img/fundoComida.jpg')} >
         <View style={styles.buttonsBox}>
           <TouchableOpacity style={styles.buttonStyle}
           onPress={() => {
@@ -99,6 +97,8 @@ export default class App extends Component {
         <View style={styles.listMenuDay}>
           <MenuDay menuDay={menuDays[this.state.indexMenuDays]} />
         </View>
+
+        </ImageBackground>
       </View>
     );
   }
@@ -157,9 +157,15 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  imgBackgroundTwo:{
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+    flex: 2,
+  },
   listMenuDay: {
     flex: 1,
-    marginBottom: 25,
+    marginBottom: 55,
   }
 
 
