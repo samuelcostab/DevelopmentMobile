@@ -57,46 +57,46 @@ export default class App extends Component {
           </ImageBackground>
         </View>
 
-        <ImageBackground style={styles.imgBackgroundTwo} resizeMode ='cover'
+        <ImageBackground style={styles.imgBackgroundTwo} resizeMode='cover'
           source={require('./src/img/fundoComida.jpg')} >
-        <View style={styles.buttonsBox}>
-          <TouchableOpacity style={styles.buttonStyle}
-          onPress={() => {
-              this.setState({ indexMenuDays: 0 })
-            }}>
-            <Text style={styles.subTitleBox}>Segunda-feira</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonStyle}
-          onPress={() => {
-              this.setState({ indexMenuDays: 1 })
-            }}>
-            <Text style={styles.subTitleBox}>Terça-feira</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonStyle}
-          onPress={() => {
-              this.setState({ indexMenuDays: 2 })
-            }}>
-            <Text style={styles.subTitleBox}>Quarta-feira</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonStyle}
-          onPress={() => {
-              this.setState({ indexMenuDays: 3 })
-            }}>
-            <Text style={styles.subTitleBox}>Quinta-feira</Text>
-          </TouchableOpacity>
+          <View style={styles.buttonsBox}>
+            <TouchableOpacity style={styles.buttonStyle}
+              onPress={() => {
+                this.setState({ indexMenuDays: 0 })
+              }}>
+              <Text style={styles.subTitleBox}>Segunda-feira</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonStyle}
+              onPress={() => {
+                this.setState({ indexMenuDays: 1 })
+              }}>
+              <Text style={styles.subTitleBox}>Terça-feira</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonStyle}
+              onPress={() => {
+                this.setState({ indexMenuDays: 2 })
+              }}>
+              <Text style={styles.subTitleBox}>Quarta-feira</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonStyle}
+              onPress={() => {
+                this.setState({ indexMenuDays: 3 })
+              }}>
+              <Text style={styles.subTitleBox}>Quinta-feira</Text>
+            </TouchableOpacity>
 
-          <TouchableOpacity style={styles.buttonStyle}
-          onPress={() => {
-              this.setState({ indexMenuDays: 4 })
-            }}>
-            <Text style={styles.subTitleBox}>Sexta-feira</Text>
-          </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonStyle}
+              onPress={() => {
+                this.setState({ indexMenuDays: 4 })
+              }}>
+              <Text style={styles.subTitleBox}>Sexta-feira</Text>
+            </TouchableOpacity>
+
+          </View>
           
-        </View>
-        
-        <View style={styles.listMenuDay}>
-          <MenuDay menuDay={menuDays[this.state.indexMenuDays]} />
-        </View>
+          <View style={styles.listMenuDay}>
+            <MenuDay menuDay={menuDays[this.state.indexMenuDays]} />
+          </View>
 
         </ImageBackground>
       </View>
@@ -137,10 +137,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  buttonStyle:{
+  buttonStyle: {
     backgroundColor: "#8B0000",
     width: 300,
-    height:40,
+    height: 40,
     justifyContent: 'center',
     marginBottom: 10,
     borderRadius: 30,
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
-  imgBackgroundTwo:{
+  imgBackgroundTwo: {
     width: '100%',
     height: '100%',
     resizeMode: 'cover',
