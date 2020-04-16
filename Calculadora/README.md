@@ -1,5 +1,6 @@
 
-#Calculadora Simples (React Native)
+## Calculadora Simples (React Native)
 
 
-Gif ta vindo ainda. kk
+
+![app-animated](https://github.com/samuelcostab/DevelopmentMobile/blob/master/Calculadora/app-animated.gif)
