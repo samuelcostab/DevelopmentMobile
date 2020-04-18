@@ -3,18 +3,19 @@ import React, { Component } from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-
 export default class Card extends Component {
 
     constructor(props){
         super(props);
         const {nameIcon, akey} = this.props
 
-        this.state = {
+        this.initialState = {
             isActivate: false,
             nameIcon: nameIcon,
             akey: akey
         }
+
+        this.state = this.initialState
     }
 
 
@@ -23,8 +24,10 @@ export default class Card extends Component {
             return <Icon name={this.state.nameIcon} size={75} color="#fff" />
     }
 
+
     render() {
-        const {handleCard, desativeCard} = this.props
+        const {handleCard} = this.props
+       
         return (
             <View>
                 <TouchableOpacity style={styles.card} onPress={() => {handleCard(this.state.akey), this.setState({isActivate: true})} }>
