@@ -58,6 +58,8 @@ export default class App extends Component {
 
     console.log(card1.props.nameIcon,card2.props.nameIcon)
 
+    //cards estão vindo trocadas ==== Suspeitas da variavel this,cards
+
     if (card1.props.nameIcon === card2.props.nameIcon) {
       console.log("São iguais", firstCard, secondCard);
       //setar no Cartao a propriedade de que ja tem seu par
